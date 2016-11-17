@@ -2,15 +2,15 @@ require 'ruboty'
 require "ruboty/keywords/version"
 
 module Ruboty
-  module Keywords
-    class Response < Base
+  module Handlers
+    class Keywords < Base
       on(
         /foo/,
         name: 'foo',
         description: 'return bar'
       )
 
-      def response(message)
+      def keywords(message)
         message.reply("bar")
       end
     end
