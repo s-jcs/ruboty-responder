@@ -10,7 +10,7 @@ module Ruboty
         description: 'return bar'
       )
 
-      def keywords(message)
+      def foo(message)
         message.reply("bar")
       end
     end
