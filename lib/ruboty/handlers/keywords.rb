@@ -4,7 +4,7 @@ module Ruboty
       on /keyword( me)?/, all: true, name: "keyword", description: "search for response if keyword exists"
 
       def keyword(message)
-        if response = keyword_list.select { |key, value| key.to_s.match(/#{message[:keyword]}\d+/)}
+        if response = keyword_list.select { |key, value| message[:keyword].match(key.to_s)}
           message.reply(response)
         end
       end
