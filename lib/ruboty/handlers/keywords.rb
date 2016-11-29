@@ -12,7 +12,7 @@ module Ruboty
       private
 
       def keyword_list
-        file = File.read("~/keywords/responses.json")
+        file = File.read("/keywords/responses.json")
         JSON.parse(file)
       end
     end
