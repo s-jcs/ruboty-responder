@@ -1,7 +1,7 @@
 module Ruboty
   module Handlers
     class Keywords < Base
-      on /keyword( me)?/, all: true, name: "keyword", description: "search for response if keyword exists"
+      on /lgtm( me )? ?(?<keyword>.+)?/, all: true, name: "keyword", description: "search for response if keyword exists"
 
       def keyword(message)
         if response = keyword_list.select { |key, value| message[:keyword].match(key.to_s)}
