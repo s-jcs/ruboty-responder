@@ -7,6 +7,7 @@ module Ruboty
         description: "search for response if keyword exists"
 
       def respond(message)
+        binding.pry
         response = get_response(message)
         message.reply(response) unless response.nil?
       end
