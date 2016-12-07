@@ -15,6 +15,7 @@ module Ruboty
 
       def get_response(message)
         #NOTE: only use the last keyword matched
+        binding.pry
         response = response_list(message)
         response[response.to_a.last[1].keys.sample] unless response.blank?
       end
