@@ -7,7 +7,6 @@ module Ruboty
         description: "search for response if keyword exists"
 
       def respond(message)
-        binding.pry
         response = get_response(message)
         message.reply(response) unless response.nil?
       end
@@ -17,7 +16,11 @@ module Ruboty
       def get_response(message)
         #NOTE: only use the last keyword matched
         list = response_list(message)
-        list[list.to_a.last[1].keys.sample] unless list.empty?
+
+        unless list.empty?
+          response = list[list.to_a.last[0]]
+          response[response.keys.sample]
+        end
       end
 
       def response_list(message)
