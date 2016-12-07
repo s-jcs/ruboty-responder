@@ -7,21 +7,20 @@ module Ruboty
         description: "search for response if keyword exists"
 
       def respond(message)
-        sentence = message[:sentence]
-        message.reply("#{sentence}")
-        keyword_list
-        ##if response = keyword_list.select { |key, value| message[:keyword].match(key.to_s)}
-        ##  message.reply(response)
-        ##end
+        if response = keyword_list.select { |key, value| message[:sentence].match(key.to_s)}
+          message.reply(response)
+        end
       end
 
       private
 
       def keyword_list
-        binding.pry
-        puts Gem.loaded_specs
-        #file = File.read("/keywords/responses.json")
-        #JSON.parse(file)
+        file = File.read(Gem.loaded_specs['ruboty-keywords'].full_gem_path + json_path)
+        JSON.parse(file)
+      end
+
+      def json_path
+        '/keywords/responses.json'
       end
     end
   end
