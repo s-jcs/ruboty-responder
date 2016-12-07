@@ -3,12 +3,13 @@ module Ruboty
     class Keywords < Base
       on /(?<sentence>.*)/,
         all: true,
-        name: "keyword",
+        name: "respond",
         description: "search for response if keyword exists"
 
-      def keyword(message)
+      def respond(message)
         sentence = message[:sentence]
         message.reply("#{sentence}")
+        keyword_list
         ##if response = keyword_list.select { |key, value| message[:keyword].match(key.to_s)}
         ##  message.reply(response)
         ##end
@@ -17,8 +18,9 @@ module Ruboty
       private
 
       def keyword_list
-        file = File.read("/keywords/responses.json")
-        JSON.parse(file)
+        puts Gem.loaded_specs['ruboty_keywords'].full_gem_path
+        #file = File.read("/keywords/responses.json")
+        #JSON.parse(file)
       end
     end
   end
