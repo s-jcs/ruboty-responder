@@ -18,7 +18,8 @@ module Ruboty
       private
 
       def keyword_list
-        puts Gem.loaded_specs['ruboty_keywords'].full_gem_path
+        binding.pry
+        Gem.loaded_specs['ruboty_keywords'].full_gem_path
         #file = File.read("/keywords/responses.json")
         #JSON.parse(file)
       end
