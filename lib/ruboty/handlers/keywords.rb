@@ -7,8 +7,8 @@ module Ruboty
         description: "search for response if keyword exists"
 
       def respond(message)
-        unless get_reponse(message).blank?
-        message.reply(get_response(message))
+        response = get_response(message)
+        message.reply(response) unless response.blank?
       end
 
       private
@@ -20,7 +20,7 @@ module Ruboty
       end
 
       def response_list(message)
-        keyword_list.select { |key, value| message[:sentence].match(key.to_s)}
+        keyword_list.select { |key, value| message[:sentence].match(key.to_s) }
       end
 
       def keyword_list
