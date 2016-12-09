@@ -1,6 +1,6 @@
 module Ruboty
   module Handlers
-    class Keywords < Base
+    class Responder < Base
       on /(?<sentence>.*)/,
         all: true,
         name: "respond",
@@ -28,7 +28,7 @@ module Ruboty
       end
 
       def keyword_list
-        file = File.read(Gem.loaded_specs['ruboty-keywords'].full_gem_path + json_path)
+        file = File.read(Gem.loaded_specs['ruboty-responder'].full_gem_path + json_path)
         JSON.parse(file)
       end
 

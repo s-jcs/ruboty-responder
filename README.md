@@ -1,4 +1,4 @@
-# Ruboty::Keywords
+# Ruboty::Responder
 
 ruboty extension to have the bot respond to specific keywords stored in a json file (currently in the gem).
 ruboty will respond without having to delcare a specific keyword.
@@ -8,14 +8,14 @@ ruboty will respond without having to delcare a specific keyword.
 - matching is done with the entire line of text, so if the string contains the keyword (i.e. keyword is foo, string is foobar), ruboty will respond. This isn't a big issue if it were in Japanese (no white spaces inbetween words), but it poses a problem for English.
   - Will have to determine if string is english or japanese, and decide to match keywords with whitespaces if english.
 
-Put your Ruby code in the file `lib/ruboty/keywords`. To experiment with that code, run `bin/console` for an interactive prompt.
+Put your Ruby code in the file `lib/ruboty/responder`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'ruboty-keywords'
+gem 'ruboty-responder'
 ```
 
 And then execute:
@@ -24,7 +24,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ruboty-keywords
+    $ gem install ruboty-responder
 
 ## Usage
 
@@ -38,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ruboty-keywords. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ruboty-responder. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
