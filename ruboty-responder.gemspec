@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["shosundberg@gmail.com"]
 
   spec.summary       = %q{Ruboty to respond to specific kewords listed in json}
-  spec.homepage      = "https://github.com/s-jcs/ruboty-keywords"
+  spec.homepage      = "https://github.com/s-jcs/ruboty-responder"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
