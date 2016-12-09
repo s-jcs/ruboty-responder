@@ -28,8 +28,7 @@ module Ruboty
       end
 
       def keyword_list
-        file = File.read(File.dirname(File.expand_path(__FILE__)), json_path)
-        JSON.parse(file)
+        @keyword_list ||= JSON.parse(File.join(File.dirname(File.expand_path(__FILE__)), json_path))
       end
 
       def json_path
