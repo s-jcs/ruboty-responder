@@ -28,11 +28,11 @@ module Ruboty
       end
 
       def keyword_list
-        @keyword_list ||= JSON.parse(File.join(File.dirname(File.expand_path(__FILE__)), json_path))
+        @keyword_list ||= JSON.parse(File.join(File.dirname(File.expand_path('..', __FILE__)), json_path))
       end
 
       def json_path
-        '../keywords/responses.json'
+        '/keywords/responses.json'
       end
     end
   end
