@@ -1,5 +1,7 @@
 module Ruboty
   module Handlers
+    require 'json'
+
     class Responder < Base
       on /(?<sentence>.*)/,
         all: true,
