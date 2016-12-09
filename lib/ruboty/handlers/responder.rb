@@ -28,7 +28,7 @@ module Ruboty
       end
 
       def keyword_list
-        file = File.read(Gem.loaded_specs['ruboty-responder'].full_gem_path + json_path)
+        file = File.read(File.dirname(File.expand_path(__FILE__)), json_path)
         JSON.parse(file)
       end
 
