@@ -32,7 +32,7 @@ module Ruboty
       end
 
       def json_path
-        '/keywords/responses.json'
+        '../keywords/responses.json'
       end
     end
   end
